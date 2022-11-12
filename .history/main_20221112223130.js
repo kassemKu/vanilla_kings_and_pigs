@@ -61,7 +61,7 @@ const player = new Player({
   },
 });
 
-let level = 1
+let level = 3
 let levels = {
   1: {
     init: () => {
@@ -186,9 +186,9 @@ function animate() {
   window.requestAnimationFrame(animate);
 
   background.draw();
-  // collisionBlocks.forEach((collisionBlock) => {
-  //   collisionBlock.draw();
-  // });
+  collisionBlocks.forEach((collisionBlock) => {
+    collisionBlock.draw();
+  });
 
   doors.forEach((door) => {
     door.draw();

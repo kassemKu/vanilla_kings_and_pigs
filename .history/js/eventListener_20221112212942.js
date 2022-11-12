@@ -1,5 +1,4 @@
 window.addEventListener("keydown", (event) => {
-  if (player.preventInput) return
   switch (event.key) {
     case " ":
 
@@ -16,11 +15,7 @@ window.addEventListener("keydown", (event) => {
       player.hitbox.position.y <=
         door.position.y + door.height
         ) {
-          player.velocity.x = 0
-          player.velocity.y = 0
-          player.preventInput = true
-          player.switchSprite('enterDoor')
-          door.play()
+          console.log('we');
           return
         }
     }

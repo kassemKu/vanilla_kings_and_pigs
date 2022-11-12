@@ -20,7 +20,6 @@ window.addEventListener("keydown", (event) => {
           player.velocity.y = 0
           player.preventInput = true
           player.switchSprite('enterDoor')
-          door.play()
           return
         }
     }

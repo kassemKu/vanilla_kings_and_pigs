@@ -47,7 +47,6 @@ const player = new Player({
           opacity: 1,
           onComplete: () => {
             level++
-            if (level ===4) level = 1
             levels[level].init()
             player.switchSprite('idleRight')
             player.preventInput = false
@@ -186,9 +185,9 @@ function animate() {
   window.requestAnimationFrame(animate);
 
   background.draw();
-  // collisionBlocks.forEach((collisionBlock) => {
-  //   collisionBlock.draw();
-  // });
+  collisionBlocks.forEach((collisionBlock) => {
+    collisionBlock.draw();
+  });
 
   doors.forEach((door) => {
     door.draw();
